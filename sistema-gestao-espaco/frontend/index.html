@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Gestão de Espaço Físico</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Sistema de Gestão de Espaço Físico</h1>
+
+  <main>
+  <section id="reserva">
+    <h2>Solicitar Reserva</h2>
+    <form id="formReserva">
+      <label>Solicitante ID:</label>
+      <input type="number" id="idSolicitante" required><br>
+
+      <label>Espaço:</label>
+      <select id="espacoSelect" required>
+        <option value="">Selecione um espaço</option>
+        <option value="1">Laboratório de Informática 1</option>
+        <option value="2">Estacionamento Bloco A</option>
+        <option value="3">Sala de Aula 101</option>
+        <option value="4">Sala de Reunião 1</option>
+        <option value="5">Auditório Central</option>
+        <option value="6">Sala de Videoconferência</option>
+        <option value="7">Clínica Escola de Psicologia</option>
+        <option value="8">Pavilhão de Aula Bloco B</option>
+        <option value="9">Centro de Esporte</option>
+      </select><br>
+
+      <label>Data da Reserva:</label>
+      <input type="date" id="dataReserva" required><br>
+
+      <label>Hora da Reserva:</label>
+      <input type="time" id="horaReserva" required><br>
+
+      <button type="submit">Enviar Solicitação</button>
+    </form>
+    <p id="respostaReserva"></p>
+  </section>
+
+  <section id="avaliacao">
+    <h2>Avaliar Solicitação</h2>
+    <form id="formAvaliacao">
+      <label>ID da Solicitação:</label>
+      <input type="number" id="idSolicitacao" required><br>
+
+      <label>ID do Gestor:</label>
+      <input type="number" id="idGestor" required><br>
+
+      <label>Status:</label>
+      <select id="status">
+        <option value="APROVADA">Aprovar</option>
+        <option value="REJEITADA">Rejeitar</option>
+      </select><br>
+
+      <label>Justificativa (opcional):</label>
+      <textarea id="justificativa"></textarea><br>
+
+      <button type="submit">Avaliar</button>
+    </form>
+    <p id="respostaAvaliacao"></p>
+  </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
